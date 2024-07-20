@@ -41,3 +41,6 @@ def progression_game(name):
 
     if result:
         gratz(name)
+
+
+progression_game("asd")
