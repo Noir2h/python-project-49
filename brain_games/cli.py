@@ -3,7 +3,7 @@ import prompt
 
 
 def welcome_user():
-    print("welcome to the Brain Games!")
+    print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
     return name
@@ -16,13 +16,16 @@ def check_answer(correct_answer, your_answer, name):
         return True
 
     else:
-        print(f" '{your_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+        print(f"'{your_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
         print(f"Let's try again, {name}!")
         return False
 
 
-def game_start(rules, question):
+def game_start(rules):
     print(rules)
+
+
+def game_core(question):
     print(f"Question: {question}")
     return prompt.string("Your answer: ")
 

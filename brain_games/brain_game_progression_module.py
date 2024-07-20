@@ -1,5 +1,5 @@
 import random
-from brain_games.cli import check_answer, game_start, gratz
+from brain_games.cli import check_answer, game_start, gratz, game_core
 
 
 def progression():
@@ -27,13 +27,11 @@ def progression():
 def progression_game(name):
     i = 0
     result = True
+    game_start("What number is missing in the progression?")
 
     while i < 3 and result:
         game_progression, correct_answer = progression()
-        your_answer = game_start(
-            "What number is missing in the progression?",
-            {" ".join(game_progression)}
-        )
+        your_answer = game_core({" ".join(game_progression)})
 
         if not check_answer(correct_answer, your_answer, name):
             result = False

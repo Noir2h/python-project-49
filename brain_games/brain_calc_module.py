@@ -1,6 +1,6 @@
 import random
 from operator import add, sub, mul
-from brain_games.cli import check_answer, game_start, gratz
+from brain_games.cli import check_answer, game_start, gratz, game_core
 
 
 def brain_calc_module(name):
@@ -12,6 +12,7 @@ def brain_calc_module(name):
 
     i = 0
     result = True
+    game_start("What is the result of the expression?")
 
     while i < 3 and result:
 
@@ -20,7 +21,7 @@ def brain_calc_module(name):
         operations_random = random.choice(operations)
         operation, sign = operations_random
         correct_answer = operation(first_operand, second_operand)
-        your_answer = game_start("What is the result of the expression?", f"{first_operand} {sign} {second_operand}",)
+        your_answer = game_core(f"{first_operand} {sign} {second_operand}")
 
         if not check_answer(str(correct_answer), your_answer, name):
             result = False
