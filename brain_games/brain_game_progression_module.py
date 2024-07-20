@@ -1,5 +1,5 @@
 import random
-from brain_games.cli import check_answer, game_start, gratz, game_core
+from brain_games.cli import check_answer, game_start, gratz_user, game_core
 
 
 def progression():
@@ -40,4 +40,4 @@ def progression_game(name):
         i += 1
 
     if result:
-        gratz(name)
+        gratz_user(name)

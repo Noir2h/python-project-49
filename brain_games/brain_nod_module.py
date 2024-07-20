@@ -1,4 +1,4 @@
-from brain_games.cli import check_answer, game_start, gratz, game_core
+from brain_games.cli import check_answer, game_start, gratz_user, game_core
 from math import gcd
 import random
 
@@ -20,4 +20,4 @@ def brain_nod_func(name):
         i += 1
 
     if result:
-        gratz(name)
+        gratz_user(name)

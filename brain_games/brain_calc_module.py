@@ -1,6 +1,6 @@
 import random
 from operator import add, sub, mul
-from brain_games.cli import check_answer, game_start, gratz, game_core
+from brain_games.cli import check_answer, game_start, gratz_user, game_core
 
 
 def brain_calc_module(name):
@@ -30,4 +30,4 @@ def brain_calc_module(name):
         i += 1
 
     if result:
-        gratz(name)
+        gratz_user(name)

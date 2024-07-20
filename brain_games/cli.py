@@ -33,5 +33,5 @@ def game_core(question):
     return prompt.string("Your answer: ")
 
 
-def gratz(name):
+def gratz_user(name):
     print(f"Congratulations, {name}!")
