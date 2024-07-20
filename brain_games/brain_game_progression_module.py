@@ -31,7 +31,7 @@ def progression_game(name):
 
     while i < 3 and result:
         game_progression, correct_answer = progression()
-        your_answer = game_core({" ".join(game_progression)})
+        your_answer = game_core(" ".join(game_progression))
 
         if not check_answer(correct_answer, your_answer, name):
             result = False
@@ -41,6 +41,3 @@ def progression_game(name):
 
     if result:
         gratz(name)
-
-
-progression_game("asd")
